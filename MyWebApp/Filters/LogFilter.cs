@@ -1,5 +1,5 @@
 ﻿using System.Diagnostics;
-using System.Web.Mvc;
+using System.AspnetCore.Mvc.Filters;
 
 namespace MyWebApp.Filters
 {

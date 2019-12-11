@@ -1,4 +1,4 @@
-﻿using System.Data.Entity;
+﻿using Microsoft.EntifyFrameworkCore;
 
 namespace MyWebApp.Models
 {
