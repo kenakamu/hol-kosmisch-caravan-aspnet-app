@@ -37,7 +37,12 @@ namespace MyWebApp
                 options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnectionString"))
             );
 
-
+            services.AddDistributedSqlServerCache(options =>
+            {
+                options.ConnectionString = Configuration.GetConnectionString("DatabaseConnectionString");
+                options.SchemaName = "dbo";
+                options.TableName = "Cache";
+            });
             //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services
                  .AddMvc(options => options.Filters.Add(new MyWebApp.Filters.LogFilter()))
